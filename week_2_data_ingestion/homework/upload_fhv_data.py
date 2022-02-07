@@ -11,12 +11,11 @@ from ingestion_functions import format_to_parquet, upload_file_to_gcs
 AIRFLOW_HOME = os.environ.get("AIRFLOW_HOME", "/opt/airflow/")
 
 EXECUTION_DATE = '{{ execution_date.strftime(\'%Y-%m\') }}'
-URL_PREFIX = 'https://nyc-tlc.s3.amazonaws.com/trip+data/fhv_tripdata_' + EXECUTION_DATE
-URL_TEMPLATE = URL_PREFIX + '.csv'
-FILE_PREFIX = AIRFLOW_HOME + '/output_file_' + EXECUTION_DATE
-OUTPUT_FILE = FILE_PREFIX + '.csv'
-PARQUET_FILE = FILE_PREFIX + '.parquet'
-GCS_FILE =  'for_hire_vehicle_data/' + EXECUTION_DATE + '.parquet'
+FILE_TEMPLATE = '/fhv_tripdata_' + EXECUTION_DATE
+URL_TEMPLATE = 'https://nyc-tlc.s3.amazonaws.com/trip+data' + FILE_TEMPLATE  + '.csv'
+OUTPUT_FILE = AIRFLOW_HOME + FILE_TEMPLATE  + '.csv'
+PARQUET_FILE = OUTPUT_FILE.replace('.csv', '.parquet')
+GCS_FILE =  'raw' + FILE_TEMPLATE  + '.parquet'
 
 BUCKET = os.environ.get("GCP_GCS_BUCKET")
 

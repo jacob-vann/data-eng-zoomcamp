@@ -12,7 +12,7 @@ AIRFLOW_HOME = os.environ.get("AIRFLOW_HOME", "/opt/airflow/")
 URL = 'https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv'
 OUTPUT_FILE = AIRFLOW_HOME + '/output_file' + '.csv'
 PARQUET_FILE = OUTPUT_FILE.replace('.csv', '.parquet')
-GCS_FILE =  'taxi_zone.parquet'
+GCS_FILE =  'raw/taxi_zone.parquet'
 
 BUCKET = os.environ.get("GCP_GCS_BUCKET")
 
