@@ -1,0 +1,75 @@
+[2022-02-08 17:50:38,804] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.gcs_2_gcs_task scheduled__2022-02-07T00:00:00+00:00 [queued]>
+[2022-02-08 17:50:38,823] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.gcs_2_gcs_task scheduled__2022-02-07T00:00:00+00:00 [queued]>
+[2022-02-08 17:50:38,828] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-08 17:50:38,830] {taskinstance.py:1239} INFO - Starting attempt 25 of 26
+[2022-02-08 17:50:38,833] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-08 17:50:38,863] {taskinstance.py:1259} INFO - Executing <Task(GCSToGCSOperator): gcs_2_gcs_task> on 2022-02-07 00:00:00+00:00
+[2022-02-08 17:50:38,881] {standard_task_runner.py:52} INFO - Started process 352 to run task
+[2022-02-08 17:50:38,891] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_bq_dag', 'gcs_2_gcs_task', 'scheduled__2022-02-07T00:00:00+00:00', '--job-id', '736', '--raw', '--subdir', 'DAGS_FOLDER/gcs_2_bq_dag.py', '--cfg-path', '/tmp/tmpe241imtd', '--error-file', '/tmp/tmpli_pivpe']
+[2022-02-08 17:50:38,899] {standard_task_runner.py:77} INFO - Job 736: Subtask gcs_2_gcs_task
+[2022-02-08 17:50:39,035] {logging_mixin.py:109} INFO - Running <TaskInstance: gcs_to_bq_dag.gcs_2_gcs_task scheduled__2022-02-07T00:00:00+00:00 [running]> on host 96d203bed047
+[2022-02-08 17:50:39,113] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gcs_to_bq_dag
+AIRFLOW_CTX_TASK_ID=gcs_2_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-07T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-07T00:00:00+00:00
+[2022-02-08 17:50:39,154] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-02-08 17:50:39,156] {gcs_to_gcs.py:346} INFO - Delimiter ignored because wildcard is in prefix
+[2022-02-08 17:50:39,735] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_rational-aria-338717/raw/fhv_tripdata_2019-11.parquet to gs://dtc_data_lake_rational-aria-338717/yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-11.parquet
+[2022-02-08 17:50:39,883] {gcs.py:251} INFO - Total Bytes: 17473492 | Bytes Written: 17473492
+[2022-02-08 17:50:39,885] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-11.parquet in bucket dtc_data_lake_rational-aria-338717 rewritten to object yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-11.parquet in bucket dtc_data_lake_rational-aria-338717
+[2022-02-08 17:50:39,954] {gcs.py:645} INFO - Blob raw/fhv_tripdata_2019-11.parquet deleted.
+[2022-02-08 17:50:39,956] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_rational-aria-338717/raw/taxi_zone.parquet to gs://dtc_data_lake_rational-aria-338717/yellow/yellow_tripdata_*.parquettaxi_zone.parquet
+[2022-02-08 17:50:40,091] {gcs.py:251} INFO - Total Bytes: 6840 | Bytes Written: 6840
+[2022-02-08 17:50:40,093] {gcs.py:264} INFO - Object raw/taxi_zone.parquet in bucket dtc_data_lake_rational-aria-338717 rewritten to object yellow/yellow_tripdata_*.parquettaxi_zone.parquet in bucket dtc_data_lake_rational-aria-338717
+[2022-02-08 17:50:40,158] {gcs.py:645} INFO - Blob raw/taxi_zone.parquet deleted.
+[2022-02-08 17:50:40,159] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_rational-aria-338717/raw/fhv_tripdata_2019-03.parquet to gs://dtc_data_lake_rational-aria-338717/yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-03.parquet
+[2022-02-08 17:50:40,289] {gcs.py:251} INFO - Total Bytes: 13349597 | Bytes Written: 13349597
+[2022-02-08 17:50:40,290] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-03.parquet in bucket dtc_data_lake_rational-aria-338717 rewritten to object yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-03.parquet in bucket dtc_data_lake_rational-aria-338717
+[2022-02-08 17:50:40,357] {gcs.py:645} INFO - Blob raw/fhv_tripdata_2019-03.parquet deleted.
+[2022-02-08 17:50:40,359] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_rational-aria-338717/raw/fhv_tripdata_2019-10.parquet to gs://dtc_data_lake_rational-aria-338717/yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-10.parquet
+[2022-02-08 17:50:40,466] {gcs.py:251} INFO - Total Bytes: 19225185 | Bytes Written: 19225185
+[2022-02-08 17:50:40,468] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-10.parquet in bucket dtc_data_lake_rational-aria-338717 rewritten to object yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-10.parquet in bucket dtc_data_lake_rational-aria-338717
+[2022-02-08 17:50:40,541] {gcs.py:645} INFO - Blob raw/fhv_tripdata_2019-10.parquet deleted.
+[2022-02-08 17:50:40,544] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_rational-aria-338717/raw/fhv_tripdata_2019-01.parquet to gs://dtc_data_lake_rational-aria-338717/yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-01.parquet
+[2022-02-08 17:50:40,645] {gcs.py:251} INFO - Total Bytes: 238946643 | Bytes Written: 238946643
+[2022-02-08 17:50:40,648] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-01.parquet in bucket dtc_data_lake_rational-aria-338717 rewritten to object yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-01.parquet in bucket dtc_data_lake_rational-aria-338717
+[2022-02-08 17:50:40,716] {gcs.py:645} INFO - Blob raw/fhv_tripdata_2019-01.parquet deleted.
+[2022-02-08 17:50:40,719] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_rational-aria-338717/raw/fhv_tripdata_2019-06.parquet to gs://dtc_data_lake_rational-aria-338717/yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-06.parquet
+[2022-02-08 17:50:40,864] {gcs.py:251} INFO - Total Bytes: 19197203 | Bytes Written: 19197203
+[2022-02-08 17:50:40,867] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-06.parquet in bucket dtc_data_lake_rational-aria-338717 rewritten to object yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-06.parquet in bucket dtc_data_lake_rational-aria-338717
+[2022-02-08 17:50:40,938] {gcs.py:645} INFO - Blob raw/fhv_tripdata_2019-06.parquet deleted.
+[2022-02-08 17:50:40,940] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_rational-aria-338717/raw/fhv_tripdata_2019-08.parquet to gs://dtc_data_lake_rational-aria-338717/yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-08.parquet
+[2022-02-08 17:50:41,073] {gcs.py:251} INFO - Total Bytes: 18445219 | Bytes Written: 18445219
+[2022-02-08 17:50:41,075] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-08.parquet in bucket dtc_data_lake_rational-aria-338717 rewritten to object yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-08.parquet in bucket dtc_data_lake_rational-aria-338717
+[2022-02-08 17:50:41,153] {gcs.py:645} INFO - Blob raw/fhv_tripdata_2019-08.parquet deleted.
+[2022-02-08 17:50:41,156] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_rational-aria-338717/raw/fhv_tripdata_2019-05.parquet to gs://dtc_data_lake_rational-aria-338717/yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-05.parquet
+[2022-02-08 17:50:41,245] {gcs.py:251} INFO - Total Bytes: 19769506 | Bytes Written: 19769506
+[2022-02-08 17:50:41,247] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-05.parquet in bucket dtc_data_lake_rational-aria-338717 rewritten to object yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-05.parquet in bucket dtc_data_lake_rational-aria-338717
+[2022-02-08 17:50:41,309] {gcs.py:645} INFO - Blob raw/fhv_tripdata_2019-05.parquet deleted.
+[2022-02-08 17:50:41,311] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_rational-aria-338717/raw/fhv_tripdata_2019-09.parquet to gs://dtc_data_lake_rational-aria-338717/yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-09.parquet
+[2022-02-08 17:50:41,447] {gcs.py:251} INFO - Total Bytes: 11159146 | Bytes Written: 11159146
+[2022-02-08 17:50:41,449] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-09.parquet in bucket dtc_data_lake_rational-aria-338717 rewritten to object yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-09.parquet in bucket dtc_data_lake_rational-aria-338717
+[2022-02-08 17:50:41,516] {gcs.py:645} INFO - Blob raw/fhv_tripdata_2019-09.parquet deleted.
+[2022-02-08 17:50:41,517] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_rational-aria-338717/raw/fhv_tripdata_2019-02.parquet to gs://dtc_data_lake_rational-aria-338717/yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-02.parquet
+[2022-02-08 17:50:41,650] {gcs.py:251} INFO - Total Bytes: 16959886 | Bytes Written: 16959886
+[2022-02-08 17:50:41,651] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-02.parquet in bucket dtc_data_lake_rational-aria-338717 rewritten to object yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-02.parquet in bucket dtc_data_lake_rational-aria-338717
+[2022-02-08 17:50:41,724] {gcs.py:645} INFO - Blob raw/fhv_tripdata_2019-02.parquet deleted.
+[2022-02-08 17:50:41,726] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_rational-aria-338717/raw/fhv_tripdata_2019-12.parquet to gs://dtc_data_lake_rational-aria-338717/yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-12.parquet
+[2022-02-08 17:50:41,862] {gcs.py:251} INFO - Total Bytes: 18961269 | Bytes Written: 18961269
+[2022-02-08 17:50:41,865] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-12.parquet in bucket dtc_data_lake_rational-aria-338717 rewritten to object yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-12.parquet in bucket dtc_data_lake_rational-aria-338717
+[2022-02-08 17:50:41,931] {gcs.py:645} INFO - Blob raw/fhv_tripdata_2019-12.parquet deleted.
+[2022-02-08 17:50:41,934] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_rational-aria-338717/raw/fhv_tripdata_2019-04.parquet to gs://dtc_data_lake_rational-aria-338717/yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-04.parquet
+[2022-02-08 17:50:42,058] {gcs.py:251} INFO - Total Bytes: 18528510 | Bytes Written: 18528510
+[2022-02-08 17:50:42,060] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-04.parquet in bucket dtc_data_lake_rational-aria-338717 rewritten to object yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-04.parquet in bucket dtc_data_lake_rational-aria-338717
+[2022-02-08 17:50:42,140] {gcs.py:645} INFO - Blob raw/fhv_tripdata_2019-04.parquet deleted.
+[2022-02-08 17:50:42,142] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_rational-aria-338717/raw/fhv_tripdata_2019-07.parquet to gs://dtc_data_lake_rational-aria-338717/yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-07.parquet
+[2022-02-08 17:50:42,276] {gcs.py:251} INFO - Total Bytes: 18730038 | Bytes Written: 18730038
+[2022-02-08 17:50:42,277] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-07.parquet in bucket dtc_data_lake_rational-aria-338717 rewritten to object yellow/yellow_tripdata_*.parquetfhv_tripdata_2019-07.parquet in bucket dtc_data_lake_rational-aria-338717
+[2022-02-08 17:50:42,361] {gcs.py:645} INFO - Blob raw/fhv_tripdata_2019-07.parquet deleted.
+[2022-02-08 17:50:42,379] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=gcs_to_bq_dag, task_id=gcs_2_gcs_task, execution_date=20220207T000000, start_date=20220208T175038, end_date=20220208T175042
+[2022-02-08 17:50:42,464] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-08 17:50:42,530] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

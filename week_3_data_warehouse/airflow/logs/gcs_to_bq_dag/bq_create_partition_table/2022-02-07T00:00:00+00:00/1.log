@@ -1,0 +1,26 @@
+[2022-02-08 21:46:51,358] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.bq_create_partition_table scheduled__2022-02-07T00:00:00+00:00 [queued]>
+[2022-02-08 21:46:51,377] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.bq_create_partition_table scheduled__2022-02-07T00:00:00+00:00 [queued]>
+[2022-02-08 21:46:51,378] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-08 21:46:51,379] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-02-08 21:46:51,380] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-08 21:46:51,399] {taskinstance.py:1259} INFO - Executing <Task(BigQueryInsertJobOperator): bq_create_partition_table> on 2022-02-07 00:00:00+00:00
+[2022-02-08 21:46:51,405] {standard_task_runner.py:52} INFO - Started process 1028 to run task
+[2022-02-08 21:46:51,418] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_bq_dag', 'bq_create_partition_table', 'scheduled__2022-02-07T00:00:00+00:00', '--job-id', '1001', '--raw', '--subdir', 'DAGS_FOLDER/gcs_2_bq_dag.py', '--cfg-path', '/tmp/tmpmoya6jkf', '--error-file', '/tmp/tmptodqbqcw']
+[2022-02-08 21:46:51,420] {standard_task_runner.py:77} INFO - Job 1001: Subtask bq_create_partition_table
+[2022-02-08 21:46:51,489] {logging_mixin.py:109} INFO - Running <TaskInstance: gcs_to_bq_dag.bq_create_partition_table scheduled__2022-02-07T00:00:00+00:00 [running]> on host e62c89e4fb3f
+[2022-02-08 21:46:51,558] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gcs_to_bq_dag
+AIRFLOW_CTX_TASK_ID=bq_create_partition_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-07T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-07T00:00:00+00:00
+[2022-02-08 21:46:51,561] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-02-08 21:46:51,564] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-02-08 21:46:51,574] {bigquery.py:1637} INFO - Inserting job ***_gcs_to_bq_dag_bq_create_partition_table_2022_02_07T00_00_00_00_00_de5791d47ce88ee1559dc54135c0a86d
+[2022-02-08 21:47:14,466] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=gcs_to_bq_dag, task_id=bq_create_partition_table, execution_date=20220207T000000, start_date=20220208T214651, end_date=20220208T214714
+[2022-02-08 21:47:14,556] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-08 21:47:14,594] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
