@@ -2,6 +2,6 @@ week_2_data_ingestion/airflow/logs/*
 week_2_data_ingestion/airflow/plugins/*
 week_2_data_ingestion/airflow/.env
 
-week_3_data_ingestion/airflow/logs/*
-week_3_data_ingestion/airflow/plugins/*
-week_3_data_ingestion/airflow/.env
+week_3_data_warehouse/airflow/logs/*
+week_3_data_warehouse/airflow/plugins/*
+week_3_data_warehouse/airflow/.env
