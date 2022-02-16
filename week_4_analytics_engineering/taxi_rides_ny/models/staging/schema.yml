@@ -3,21 +3,13 @@ version: 2
 
 sources:
     - name: staging
-      #For bigquery:
-      #database: taxi-rides-ny-339813
-
-      # For postgres:
-      database: production
-
+      database: rational-aria-338717 
       schema: trips_data_all
 
-      # loaded_at_field: record_loaded_at
       tables:
         - name: green_tripdata
         - name: yellow_tripdata
-         # freshness:
-           # error_after: {count: 6, period: hour}
-
+         
 models:
     - name: stg_green_tripdata
       description: >
@@ -87,6 +79,7 @@ models:
               - accepted_values:
                   values: "{{ var('payment_type_values') }}"
                   severity: warn
+                  quote: false
           - name: payment_type_description
             description: Description of the payment_type code
           - name: Fare_amount 
@@ -178,6 +171,7 @@ models:
               - accepted_values:
                   values: "{{ var('payment_type_values') }}"
                   severity: warn
+                  quote: false
           - name: payment_type_description
             description: Description of the payment_type code
           - name: Fare_amount 
