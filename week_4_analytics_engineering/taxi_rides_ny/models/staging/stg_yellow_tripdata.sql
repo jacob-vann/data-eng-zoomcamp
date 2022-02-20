@@ -42,4 +42,8 @@ from tripdata
 where rn = 1
 
 
+{% if var('is_test_run', default=true) %}
 
+    limit 100
+
+{% endif %}
