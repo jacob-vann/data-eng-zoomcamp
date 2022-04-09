@@ -1,0 +1,11 @@
+{
+    "gcp":
+    {
+        "project_id": "rational-aria-338717",
+        "gcs_bucket": "rta_bucket",
+        "bq_dataset": "rta_data",
+        "bq_table": "road_traffic_accidents_berlin",
+        "bq_partitioned_table": "road_traffic_accidents_berlin_partitioned"
+    }
+}
+
