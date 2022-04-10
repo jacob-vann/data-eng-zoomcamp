@@ -15,7 +15,7 @@ CREATE_PARTITIONED_TABLE_QUERY = f'CREATE OR REPLACE TABLE {BQ_DATASET}.{BQ_PART
                                  PARTITION BY RANGE_BUCKET(OBJECTID, GENERATE_ARRAY(0, 100, 10)) AS \
                                  SELECT * FROM {BQ_DATASET}.{BQ_TABLE};'
 
-                           
+      
 dag = DAG(
     'gcs_to_bq_dag',
      schedule_interval='@yearly',
