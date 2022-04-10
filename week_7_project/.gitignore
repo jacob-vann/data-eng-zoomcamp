@@ -1,8 +1,10 @@
 airflow/logs/*
 airflow/extras/*
-airflow/dags/__pycache__/*
+
 
 airflow/dags/config/__pycache__/*
+airflow/dags/__pycache__/*
 airflow/dags/config/config.json
 airflow/dags/config/schema.json
+
 
