@@ -11,7 +11,10 @@ BQ_DATASET = cfg['gcp']['bq_dataset']
 BQ_TABLE = cfg['gcp']['bq_table'] 
 BQ_PARTITIONED_TABLE = cfg['gcp']['bq_partitioned_table'] 
 
-with open(path.join(path.dirname(path.realpath(__file__)), 'schema.json')) as json_file: 
+SCHEMA_FILE = path.join(path.dirname(path.realpath(__file__)), 'schema.json')
+SCHEMA_BQ_FILE = path.join(path.dirname(path.realpath(__file__)), 'schema.json')
+
+with open(SCHEMA_FILE) as json_file: 
     SCHEMA = json.load(json_file)
 
 

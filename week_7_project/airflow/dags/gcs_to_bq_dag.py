@@ -10,6 +10,7 @@ PROJECT_ID = cfg.PROJECT_ID
 BQ_DATASET = cfg.BQ_DATASET
 BQ_TABLE = cfg.BQ_TABLE
 BQ_PARTITIONED_TABLE = cfg.BQ_PARTITIONED_TABLE
+SCHEMA_BQ_FILE = cfg.SCHEMA_BQ_FILE
 
 CREATE_PARTITIONED_TABLE_QUERY = f'CREATE OR REPLACE TABLE {BQ_DATASET}.{BQ_PARTITIONED_TABLE} \
                                  PARTITION BY RANGE_BUCKET(OBJECTID, GENERATE_ARRAY(0, 100, 10)) AS \
@@ -35,6 +36,7 @@ with dag:
                 'tableId': BQ_TABLE
             },
             'externalDataConfiguration':{
+                'autodetect': "True",
                 'sourceFormat': 'PARQUET',
                 'sourceUris': [f'gs://{GCS_BUCKET}/raw/*']
             },

@@ -27,11 +27,16 @@ def format_data(src_file, dst_file):
     df = pd.read_csv(src_file, sep=';', decimal=",", encoding="ISO-8859-1") \
         .rename(columns={'IstSonstig': 'IstSonstige', 'STRZUSTAND': 'USTRZUSTAND'})
 
-    for col in SCHEMA.keys():
+    for col, type in SCHEMA.items():
         if col not in df.columns:
-            df[col] = np.nan
+            print('here')
+            print(col)
+            df[col] = np.nan 
 
-    df = df.astype(dtype=SCHEMA).to_parquet(dst_file)
+    print(df.columns)
+    df.astype(dtype=SCHEMA).to_parquet(dst_file)
+    
+    # to_csv(dst_file, index=False, encoding='iso-8859-1')
 
 dag = DAG(
     'upload_rta_data_dag',
@@ -60,7 +65,7 @@ with dag:
     local_to_gcs_task  = LocalFilesystemToGCSOperator(
         task_id='local_to_gcs_task',
         src=f'{AIRFLOW_HOME}/{PARQUET_FILE}',
-        dst=f'raw/{PARQUET_FILE}',
+        dst=f'raw/{CSV_FILE}',
         bucket=GCS_BUCKET 
     )
 
